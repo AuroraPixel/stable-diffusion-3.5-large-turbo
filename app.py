@@ -5,7 +5,7 @@ import base64
 
 class InferlessPythonModel:
     def initialize(self):
-        self.pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3.5-large", torch_dtype=torch.float16)
+        self.pipe = StableDiffusion3Pipeline.from_pretrained("stabilityai/stable-diffusion-3.5-large-turbo", torch_dtype=torch.float16)
         self.pipe = self.pipe.to("cuda")
 
     def infer(self, inputs):
